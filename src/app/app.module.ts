@@ -28,10 +28,8 @@ import { AuthService } from './service/auth.service' ;
     AngularFireMessagingModule,
     AngularFireStorageModule,
     FormsModule
-
-
-    
   ],
+  
   providers: [
     AngularFirestore,
     AuthService
