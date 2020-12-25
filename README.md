@@ -1,3 +1,3 @@
-# TP - INGÉNIERIE DES APPLICATIONS SERVERLESS - Angular x Heroku
+# TP - INGÉNIERIE DES APPLICATIONS SERVERLESS - Angular x Firebase Auth
 Rais Haythem - ASEDS INE3
-Technologies : Angular - ExpressJs - Heroku
+Technologies : Firebase - Angular - ExpressJs - Heroku
