@@ -1,0 +1,65 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1>
+    Compte Rendu - PAAS - Angular/Express x Heroku
+  </h1>
+  <h2>
+    Rais Haythem - ASEDS INE3
+  </h2>
+  <p> Je n'ai jamais regardé de mangas!</p> 
+  <p> Je vais plutôt lister mes 3 films préférés </p>
+</div>
+
+<table>
+  <tr>
+    <th>Poster</th>
+    <th>Movie</th>
+    <th>Categorie</th>
+  </tr>
+  <tr>
+    <img src="https://lumiere-a.akamaihd.net/v1/images/image_aa4e1a3f.jpeg?region=0,0,1400,2100" />
+    <td>Ferdinand</td>
+    <td>Animation, Adventure</td>
+  </tr>
+   <tr>
+    <img src="https://images-na.ssl-images-amazon.com/images/I/516fi34NkvL._AC_.jpg" />
+    <td>the Omen</td>
+    <td>Horror, Psychological</td>
+  </tr>
+  <tr>
+    <img src="https://images-na.ssl-images-amazon.com/images/I/A1tyD0nKdhL._AC_SL1500_.jpg" />
+    <td>Coco</td>
+    <td>Animation, Fantasy</td>
+  </tr>
+
+</table>
+
+<div>
+  <!-- this header tag displays only when user is logged-in -->
+  <h1 *ngIf="authService.user | async">
+    Welcome User: {{ (authService.user | async)?.email }}!
+  </h1>
+
+<!-- this div displays only when user is not-logged-in -->
+<div *ngIf="!(authService.user | async)">
+      <!-- these input fields takes email and password from user -->
+      <input type="text" [(ngModel)]="email" placeholder="Enter email"/>
+      <input type="password" [(ngModel)]="password" placeholder="Enter password"/>
+
+      <!-- user click this button to signup -->
+      <button (click)="signup()" [disabled]="!email || !password">
+        Signup
+      </button>
+
+      <!-- user click this button to login -->
+      <button (click)="login()" [disabled]="!email || !password">
+        Login
+      </button>
+</div>
+
+  <!-- user click this button to logout -->
+  <!-- this button displays only when user is logged-in -->
+  <button (click)="logout()" *ngIf="authService.user | async">
+    Logout
+  </button>
+</div>
